@@ -97,5 +97,8 @@ There is an ObjectManager used to create instance of _Pronko\Magento2ModuleReade
 The goal of using ObjectManager class is to avoid ___construct()_ method overrides and give flexibility for developers to declare custom Namespaces via their own _di.xml_ files.
 If you see better approach, I am open for discussion.
 
+## Tests
+Unit Tests are available at the Test directory.
+
 # Contributions
 Feel free to use this repository in your projects, create pull requests and most important is to provide feedback on further improvements.

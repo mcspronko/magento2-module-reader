@@ -12,7 +12,7 @@ use Magento\Framework\Module\Dir\Reader as FrameworkReader;
  * Class Reader
  *
  * This class provides support for custom module namespace
- * to have all controllers located in the Girosolution\Girocheckout\Magento directory
+ * to have all controllers located in the Vendor\PackageName\Magento directory
  *
  * @package     Pronko\Magento2ModuleReader\Framework\Module\Dir
  */
@@ -65,7 +65,7 @@ class Reader extends FrameworkReader
     {
         if (!is_array($this->namespaceMappings)) {
             $this->namespaceMappings = \Magento\Framework\App\ObjectManager::getInstance()
-                ->get('Pronko\Magento2ModuleReader\Data\NamespaceMapping')->get();
+                ->get(\Pronko\Magento2ModuleReader\Data\NamespaceMapping::class)->get();
         }
         return isset($this->namespaceMappings[$moduleName]) ? $this->namespaceMappings[$moduleName] : $moduleName;
     }
