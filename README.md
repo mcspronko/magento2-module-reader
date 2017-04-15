@@ -85,7 +85,7 @@ The _\Magento\Framework\App\FrontController_ class will match route and pass exe
 ## Additional Information
 This module is backward compatible with future Magento 2.x releases. 
 There is an ObjectManager used to create instance of _Pronko\Magento2ModuleReader\Data\NamespaceMapping_ class. 
-The goal of using it is to avoid __construct() method overrides and give flexibility for developers to declare Namespace via their own di.xml files.
+The goal of using ObjectManager class is to avoid ___construct()_ method overrides and give flexibility for developers to declare custom Namespaces via their own _di.xml_ files.
 If you see better approach, I am open for discussion.
 
 # Contributions
