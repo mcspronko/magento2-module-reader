@@ -1,0 +1,25 @@
+{
+  "name": "mcspronko/magento2-module-reader",
+  "description": "Magento 2 Module Directory Reader",
+  "type": "magento2-module",
+  "version": "1.0.0",
+  "license": "MIT",
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://repo.magento.com/"
+    }
+  ],
+  "require": {
+    "php": "~5.6.0|7.0.2|7.0.4|~7.0.6",
+    "magento/module-framework": "100.0.*|100.1.*"
+  },
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Pronko\\Magento2ModuleReader\\": ""
+    }
+  }
+}
