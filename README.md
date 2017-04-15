@@ -20,7 +20,7 @@ Pronko/CustomPackage
    - Model
    - Test
  - Api
-  - RepositoryInterface.php
+   - RepositoryInterface.php
  - Common
    - Repository.php
  - composer.json
@@ -81,6 +81,12 @@ Also, _frontend/routes.xml_ file in your module should be configured using new M
 
 Once configuration is provided, create Action Controller in the _Vendor\PackageName\Magento\Controller_ directory. 
 The _\Magento\Framework\App\FrontController_ class will match route and pass execution to an Action Controller. 
+
+## Additional Information
+This module is backward compatible with future Magento 2.x releases. 
+There is an ObjectManager used to create instance of _Pronko\Magento2ModuleReader\Data\NamespaceMapping_ class. 
+The goal of using it is to avoid __construct() method overrides and give flexibility for developers to declare Namespace via their own di.xml files.
+If you see better approach, I am open for discussion.
 
 # Contributions
 Feel free to use this repository in your projects, create pull requests and most important is to provide feedback on further improvements.
