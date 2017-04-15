@@ -1,6 +1,6 @@
 # Magento 2 Module Directory Reader - Framework Agnostic Support
-This repository provides support for custom Magento 2 module directory location. 
-The goal is to provide support for Magento 2 module modules which implements supports framework agnostic model.
+The _Magento 2 Module Directory Reader_ repository enables custom Magento 2 module directory location. 
+The goal is to provide support for custom Magento 2 modules who respect framework agnostic model.
 
 # Example
 Suppose you have package which contains 2 directories Magento and Business logic. 
@@ -81,3 +81,6 @@ Also, _frontend/routes.xml_ file in your module should be configured using new M
 
 Once configuration is provided, create Action Controller in the _Vendor\PackageName\Magento\Controller_ directory. 
 The _\Magento\Framework\App\FrontController_ class will match route and pass execution to an Action Controller. 
+
+# Contributions
+Feel free to use this repository in your projects, create pull requests and most important is to provide feedback on further improvements.
