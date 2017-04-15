@@ -87,6 +87,17 @@ The `registration.php` file should be located in the `Vendor_PackageName` direct
     __DIR__ . '/Magento'
 );
 ```
+Assuming that composer.json has same declaration for autoload as usual Magento 2 module and located in the root of a package.
+```
+  "autoload": {
+    "files": [
+      "registration.php"
+    ],
+    "psr-4": {
+      "Vendor\\PackageName\\": ""
+    }
+  }
+```
 
 Once configuration is provided, create Action Controller in the _Vendor\PackageName\Magento\Controller_ directory. 
 The _\Magento\Framework\App\FrontController_ class will match route and pass execution to an Action Controller. 
