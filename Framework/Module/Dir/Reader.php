@@ -49,7 +49,7 @@ class Reader extends FrameworkReader
      * @param string $moduleName
      * @return string
      */
-    protected function getNamespace($moduleName)
+    private function getNamespace($moduleName)
     {
         return str_replace('_', '\\', $this->getNamespaceMapping($moduleName));
     }
