@@ -30,3 +30,17 @@ Directory path to Controller directory is Pronko/CustomPackage/Magento/Controlle
 # Problem Statement
 
 Currently _Magento\Framework\Module\Dir\Reader::getActionFiles()_ method prepares Controller class names and its actions using expected by Magento 2 module naming Vendor_ModuleName.
+
+In our case Pronko_CustomPackage module name declared in the etc/module.xml file will be different from Action Controller Directory Pronko_CustomPackage_Magento.
+
+Action Controller in the Pronko/CustomPackage/Magento/Controller/Checkout/Result will be ignored since getActionFiles() method prepares Pronko/CustomPackage/Controller/Checkout/Result Action Controller name.
+
+# Solution
+
+This Magento 2 module provides fix for the problem where you have 3-level nesting package.
+
+# Installation
+Include repository as a dependency for your custom Magento 2 module or as part of Magento project:
+```
+$ composer require mcspronko/magento2-module-dir-reader
+```
