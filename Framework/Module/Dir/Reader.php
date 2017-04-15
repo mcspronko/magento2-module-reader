@@ -1,6 +1,6 @@
 <?php
 
-namespace Girosolution\Girocheckout\Magento\Framework\Module\Dir;
+namespace Pronko\Magento2ModuleReader\Framework\Module\Dir;
 
 use Magento\Framework\Module\Dir;
 use Magento\Framework\Module\Dir\Reader as FrameworkReader;
