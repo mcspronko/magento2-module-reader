@@ -1,5 +1,8 @@
 <?php
-
+/**
+ * Copyright © 2017 Max Pronko. All rights reserved.
+ * See LICENSE for license details.
+ */
 namespace Pronko\Magento2ModuleReader\Framework\Module\Dir;
 
 use Magento\Framework\Module\Dir;
@@ -11,7 +14,7 @@ use Magento\Framework\Module\Dir\Reader as FrameworkReader;
  * This class provides support for custom module namespace
  * to have all controllers located in the Girosolution\Girocheckout\Magento directory
  *
- * @package     Girosolution\Girocheckout\Magento\Framework\Module\Dir
+ * @package     Pronko\Magento2ModuleReader\Framework\Module\Dir
  */
 class Reader extends FrameworkReader
 {
