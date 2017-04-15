@@ -19,10 +19,14 @@ Pronko/CustomPackage
   - RepositoryInterface.php
  - Common
    - Repository.php
- composer.json
- registration.php
+ - composer.json
+ - registration.php
  ```
  
 In the example we want to have an Action Controller which is accessible via www.domain.com/pronko/checkout/result URL. With the structure provided in the example we have Pronko/CustomPackage/Magento directory which is our Magento 2 module.
 
-Directory path to Controller directory is Pronko/CustomPackage/Magento/Controller.
+Directory path to Controller directory is Pronko/CustomPackage/Magento/Controller. In order for Magento framework to identify this custom controller path the Magento\Framework\Module\Dir\Reader::getActionFiles() method collects all controller actions from all modules including our Pronko/CustomPackage module.
+
+# Problem Statement
+
+Currently _Magento\Framework\Module\Dir\Reader::getActionFiles()_ method prepares Controller class names and its actions using expected by Magento 2 module naming Vendor_ModuleName.
