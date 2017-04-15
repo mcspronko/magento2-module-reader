@@ -78,6 +78,15 @@ Also, _frontend/routes.xml_ file in your module should be configured using new M
      </route>
  </router>
  ```
+ 
+The `registration.php` file should be located in the `Vendor_PackageName` directory and point to Magento directory, module name however should still be `Vendor_PackageName`.
+```php
+\Magento\Framework\Component\ComponentRegistrar::register(
+    \Magento\Framework\Component\ComponentRegistrar::MODULE,
+    'Vendor_PackageName',
+    __DIR__ . '/Magento'
+);
+```
 
 Once configuration is provided, create Action Controller in the _Vendor\PackageName\Magento\Controller_ directory. 
 The _\Magento\Framework\App\FrontController_ class will match route and pass execution to an Action Controller. 
